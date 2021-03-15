@@ -1,0 +1,106 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 10px;
+  background: #ffc600;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Amatic SC', cursive;
+}
+
+h1,h2 {
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+.score {
+  background: rgba(255,255,255,0.2);
+  padding: 0 1.5rem;
+  line-height: 1;
+  border-radius: 0.5rem;
+}
+
+.game {
+  width: 600px;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.hole {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 33.33%;
+          flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height:70px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.mole {
+  background: url('mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  background-position: center;
+  position: absolute;
+  top: 100%;
+  width: 80%;
+  height: 80%;
+  -webkit-transition:all 0.4s;
+  -o-transition:all 0.4s;
+  transition:all 0.4s;
+}
+
+.hole.up .mole {
+  top: 20%;
+}
+
+.btn{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+button {
+  width: 75px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: #3d2a06d5;
+  color: white;
+  border: 1px solid #3D2A06;
+}
